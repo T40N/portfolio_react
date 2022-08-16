@@ -17,12 +17,21 @@ const MENU_LINKS = [
 
 const MenuListItemDisplay = () => {
   return (
-    <ul className="h-full flex flex-col items-center justify-center gap-4">
+    <ul className={styles}>
       {MENU_LINKS.map((link) => {
         return <MenuListItem src={link.src} name={link.linkName} />;
       })}
     </ul>
   );
 };
+
+const styles = `
+  h-full
+  flex
+  flex-col
+  items-center
+  justify-center
+  gap-4
+`;
 
 export default MenuListItemDisplay;
